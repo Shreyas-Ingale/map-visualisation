@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.map {
+  @apply w-full h-[100vh];
+}
+
+.ol-popup {
+  @apply absolute bg-white shadow-md p-4 rounded-xl border border-gray-300 bottom-3 -left-12 min-w-72;
+}
+
+.ol-popup:after,
+.ol-popup:before {
+  @apply absolute pointer-events-none top-full border-solid border-transparent content-none h-0 w-0;
+}
+
+.ol-popup:after {
+  @apply border-t-white border-[10px] left-12 ml-[-10px];
+}
+
+.ol-popup:before {
+  @apply border-t-gray-300 border-[11px] left-12 ml-[-11px];
+}
+
+.ol-popup-closer {
+  @apply no-underline absolute top-1 right-2.5;
+}
+
+.ol-popup-closer:after {
+  @apply content-["✖"];
+}
